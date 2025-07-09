@@ -14,6 +14,10 @@
 <.list>
   <:item title="Name">{@user.name}</:item>
   <:item title="Age">{@user.age}</:item>
+  <:item title="Gender">{@user.gender}</:item>
+  <:item title="Address">{@user.address}</:item>
+  <:item title="Date of Birth">{@user.dob}</:item>
+  <:item title="Category Range">{MyApp.Accounts.user_age_range(@user)}</:item>
 </.list>
 
 <.back navigate={~p"/users"}>Back to users</.back>
