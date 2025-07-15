@@ -6,7 +6,7 @@ defmodule MyAppWeb.PostLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, stream(socket, :posts, Content.list_posts())}
+    {:ok, stream(socket, :posts, Content.list_posts(preload: [:user]))}
   end
 
   @impl true

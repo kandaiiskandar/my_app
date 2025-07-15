@@ -13,7 +13,7 @@ defmodule MyAppWeb.PostLive.Show do
     {:noreply,
      socket
      |> assign(:page_title, page_title(socket.assigns.live_action))
-     |> assign(:post, Content.get_post!(id))}
+     |> assign(:post, Content.get_post!(id, preload: [:user]))}
   end
 
   defp page_title(:show), do: "Show Post"
